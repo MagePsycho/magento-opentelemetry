@@ -1,0 +1,11 @@
+services:
+  php-fpm:
+    build:
+      context: ./.warden/php
+    volumes:
+      - ./.warden/php/zz-config.ini:/etc/php.d/zz-config.ini
+  php-debug:
+    build:
+      context: ./.warden/php
+    volumes:
+      - ./.warden/php/zz-config.ini:/etc/php.d/zz-config.ini
